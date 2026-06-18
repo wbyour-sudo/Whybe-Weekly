@@ -16,7 +16,6 @@ body {
     padding: 40px 20px;
 }
 
-/* --- Typography / Judul --- */
 h1, h2, h3, h4, th {
     font-family: 'Orbitron', sans-serif;
     letter-spacing: 2px;
@@ -34,7 +33,6 @@ h2, h4 {
     margin-bottom: 15px;
 }
 
-/* --- Navigasi & Tabel Atas --- */
 table[align="center"] {
     margin: 20px auto 40px auto;
     border-collapse: separate;
@@ -67,7 +65,6 @@ table[align="center"] td:hover a {
     color: #0b0c10;
 }
 
-/* --- Kontainer Konten (Home & Profil) --- */
 .data-container, table {
     background: rgba(31, 40, 51, 0.4);
     border: 1px solid rgba(102, 252, 241, 0.2);
@@ -79,7 +76,6 @@ table[align="center"] td:hover a {
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
 }
 
-/* --- Tabel Data (Mahasiswa) --- */
 table[border="1"] {
     width: 100%;
     max-width: 1000px;
@@ -107,7 +103,6 @@ table[border="1"] tr:hover {
     background: rgba(102, 252, 241, 0.05);
 }
 
-/* --- Form & Input (Futuristik) --- */
 form {
     max-width: 600px;
     margin: 40px auto;
@@ -150,7 +145,6 @@ input[type="radio"], input[type="checkbox"] {
     accent-color: #66fcf1;
 }
 
-/* --- Tombol / Buttons --- */
 button, input[type="submit"] {
     background: linear-gradient(45deg, #1f2833, #0b0c10);
     color: #66fcf1;
@@ -171,7 +165,6 @@ button:hover, input[type="submit"]:hover {
     transform: scale(1.05);
 }
 
-/* --- Gambar --- */
 img {
     border-radius: 8px;
     border: 2px solid #45f3ff;
