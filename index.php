@@ -8,7 +8,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="asset/style.css">
 </head>
 <body>
 
@@ -17,10 +17,10 @@
     <!-- Tabel Navigasi -->
     <table align="center">
         <tr>
-            <td><a href="index.html">Home</a></td>
-            <td><a href="profil.html">Profil</a></td>
-            <td><a href="kontak.html">Kontak</a></td>
-            <td><a href="mahasiswa.html">Data Mahasiswa</a></td>
+            <td><a href="index.php">Home</a></td>
+            <td><a href="profil.php">Profil</a></td>
+            <td><a href="kontak.php">Kontak</a></td>
+            <td><a href="mahasiswa.php">Data Mahasiswa</a></td>
         </tr>
     </table>
 

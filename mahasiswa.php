@@ -1,75 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Data Mahasiswa</title>
-     <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+    <link rel="stylesheet" href="asset/style.css">
 </head>
+
 <body>
-    <h1 align="center">
-        Data Mahasiswa
-    </h1>
-
-    <table border="1" align="center" cellspacing="0" cellpadding="10px">
+    <h1 align="center">WEBTI | YB</h1>
+    <table border="1" cellspacing="0" cellpadding="10px" align="center">
         <tr>
-                <td>
-                    <a href="index.html">Home</a> 
-                </td>
-                <td>
-                    <a href="profil.html">Profil</a> 
-                </td>
-                <td>
-                    <a href="kontak.html">Kontak</a>
-                </td>
-                <td>
-                    <a href="mahasiswa.html">Data Mahasiswa</a>
-                </td>
+            <td><a href="index.php">home</a></td>
+            <td><a href="profil.php">profile</a></td>
+            <td><a href="kontak.php">contact</a></td>
+            <td><a href="mahasiswa.php">data</a></td>
         </tr>
     </table>
-    <h2>
-        
-    </h2>
-    <table border="1" cellpadding="10px">
+    <h1>data mahasiswa</h1>
+    <table border="1" cellpadding="10px" cellspacing="0" 
         <tr>
-            <td rowspan="2">Baris 1,kolom 1</td>
-            <td colspan="2"> Baris 1, kolom 1</td>
-            <!-- <td>Baris 1, Kolom 2<td>  -->
+            <th>id</th>
+            <th>nama</th>
+            <th>nim</th>
+            <th>prodi</th>
+            <th>email</th>
+            <th>no_hp</th>
+            <th>foto</th>
+            <th>aksi</th>
         </tr>
         <tr>
-            <!-- <td>Baris 2, Kolom 1</td> -->
-            <td> Baris 2, Kolom 1</td>
-            <td> Baris 2, Kolom 2</td>
+        <a href="tambah.php"><button>Tambah data</button></a>
+        <td>1</td>
+        <td>Yanuar Eka Arifiyanto</td>
+        <td>13242520002</td>
+        <td>Teknologi Informasi</td>
+        <td>wbyour@gmail.com</td>
+        <td>08888888888</td>
+        <td>
+            <img src="/asset/urbae.png" alt="" width='100px'></td>
+        <td>
+            <a href="edit.php"><button>Edit</button></a> <b>|</b> 
+            <a href="delete.php"><button>hapus</button></a>
+        </td>
         </tr>
+       
     </table>
- <hr>
-        <table border="1" cellspacing="5px" cellpadding="10px">
-            <tr>
-                <td>1,1</td>
-                <td>1,2</td>
-                <td>1,3</td>
-                <td>1,4</td>
-            </tr>
-            <tr>
-                <td>2,1</td>
-                <td colspan="2" rowspan="2" align="center">?</td>
-                <!-- <td>2,3</td> -->
-                <td>2,4</td>
-            </tr>
-            <tr>
-                <td>3,1</td>
-                <!-- <td>3,2</td> -->
-                <!-- <td>3,3</td> -->
-                <td>3,4</td>
-            </tr>
-            <tr>
-                <td>4,1</td>
-                <td>4,2</td>
-                <td>4,3</td>
-                <td>4,4</td>
-            </tr>
-        </table>
-
 
 </body>
+
 </html>

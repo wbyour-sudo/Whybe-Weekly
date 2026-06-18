@@ -2,7 +2,7 @@
 <html>
 <head>
     <title>Profil Penulis</title>
-     <link rel="stylesheet" href="style.css">
+     <link rel="stylesheet" href="asset/style.css">
 </head>
 
 <body>
@@ -10,16 +10,16 @@
     <table border="1" align="center" cellspacing="0" cellpadding="10px">
         <tr>
                 <td>
-                    <a href="index.html">Home</a> 
+                    <a href="index.php">Home</a> 
                 </td>
                 <td>
-                    <a href="profil.html">Profil</a> 
+                    <a href="profil.php">Profil</a> 
                 </td>
                 <td>
-                    <a href="kontak.html">Kontak</a>
+                    <a href="kontak.php">Kontak</a>
                 </td>
                 <td>
-                    <a href="mahasiswa.html">Data Mahasiswa</a>
+                    <a href="mahasiswa.php">Data Mahasiswa</a>
                 </td>
         </tr>
     </table>
