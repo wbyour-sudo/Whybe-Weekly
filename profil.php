@@ -1,8 +1,9 @@
-<!DOCTYPE html>
-<html>
+<!DOCTYPE .php>
+<.php>
 <head>
     <title>Profil Penulis</title>
      <link rel="stylesheet" href="asset/style.css">
+     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;900&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -33,4 +34,4 @@
     </table>
      
 </body>
-</html>
+</.php>

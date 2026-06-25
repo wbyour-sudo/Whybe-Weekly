@@ -1,134 +1,127 @@
-/* --- Google Fonts & Reset --- */
-/* Menggunakan font sans-serif tebal dan monospace khas komputer/majalah 90an */
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Space+Mono:wght@400;700&display=swap');
+/* ==========================================
+   90s RETRO THEME BY TI UNIMUS
+   ========================================== */
 
+/* Reset & Global Styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Poppins', 'Courier New', Courier, monospace;
 }
 
 body {
-    /* Mengganti hitam pekat dengan warna Oatmeal/Beige hangat yang sangat nyaman di mata */
-    background-color: #f4f1ea; 
+    background-color: #f3efe0; /* Latar belakang kertas koran/komputer jadul */
     color: #2b2b2b;
-    font-family: 'DM Sans', sans-serif;
-    font-size: 18px;
+    padding: 20px;
     line-height: 1.6;
-    padding: 40px 20px;
 }
 
+/* Typography Retro Style */
 h1, h2, h3, h4, th {
-    font-family: 'Space Mono', monospace;
-    letter-spacing: -0.5px;
-    font-weight: 700;
-}
-
-h1 {
-    /* Warna Terracotta/Bata retro yang estetik */
-    color: #e05a47; 
-    margin-bottom: 30px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 900;
     text-transform: uppercase;
-    font-size: 2.5rem;
-    text-shadow: none; /* Menghilangkan efek glow cyberpunk */
-}
-
-h2, h4 {
-    /* Warna Hijau Sage tua yang adem */
-    color: #3b5a4f; 
+    text-shadow: 2px 2px 0px #ff6b6b; /* Efek bayangan teks 3D jadul */
+    color: #1a1a1a;
     margin-bottom: 15px;
 }
 
-/* --- Menu Navigasi / Link Utama --- */
-table[align="center"] {
-    margin: 20px auto 40px auto;
-    border-collapse: separate;
-    border-spacing: 15px 0;
+h1 {
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+    background: #4ecdc4;
+    padding: 15px;
+    border: 4px solid #1a1a1a;
+    box-shadow: 6px 6px 0px #1a1a1a;
+    display: block;
+    text-align: center;
+    margin-bottom: 30px;
 }
 
+h2 {
+    font-size: 1.5rem;
+    border-bottom: 3px dashed #1a1a1a;
+    padding-bottom: 5px;
+    margin-top: 20px;
+}
+
+/* Navigation & Tables */
+table {
+    width: 100%;
+    max-width: 800px;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background-color: #ffffff;
+    border: 4px solid #1a1a1a;
+    box-shadow: 8px 8px 0px #1a1a1a; /* Hard shadow khas 90an */
+}
+
+th, td {
+    border: 2px solid #1a1a1a;
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #ffe66d;
+    color: #1a1a1a;
+    text-shadow: none;
+}
+
+/* Navigasi Khusus Baris Menjadi Tombol */
 table[align="center"] td {
-    /* Desain tombol 90an: Border solid tebal dengan bayangan kotak tegas (blocky shadow) */
-    background: #ffffff;
-    border: 2px solid #2b2b2b;
-    border-radius: 6px;
-    padding: 10px 20px;
-    transition: all 0.2s ease;
-    box-shadow: 4px 4px 0px #2b2b2b;
+    text-align: center;
+    background-color: #ff6b6b;
+    transition: transform 0.1s ease;
 }
 
 table[align="center"] td:hover {
-    /* Warna Kuning Mustard pop-art saat di-hover */
-    background: #fce762; 
-    box-shadow: 6px 6px 0px #2b2b2b;
+    background-color: #ffe66d;
     transform: translate(-2px, -2px);
 }
 
 table[align="center"] td a {
-    color: #2b2b2b;
+    color: #ffffff;
     text-decoration: none;
     font-weight: bold;
-    text-transform: uppercase;
+    display: block;
+    font-size: 1.1rem;
+    text-shadow: 1px 1px 0px #1a1a1a;
 }
 
-table[align="center"] td:hover a {
-    color: #2b2b2b;
+table[align="center"] td a:hover {
+    color: #1a1a1a;
+    text-shadow: none;
 }
 
-/* --- Data Container & Base Table --- */
-.data-container, table {
-    background: #ffffff;
-    border: 2px solid #2b2b2b;
-    border-radius: 12px;
-    padding: 30px;
-    max-width: 800px;
-    margin: 20px auto;
-    backdrop-filter: none; /* Menghilangkan blur modern */
-    box-shadow: 6px 6px 0px rgba(43, 43, 43, 0.15);
+/* Containers & Boxes */
+.data-container {
+    max-width: 600px;
+    margin: 30px auto;
+    background: #ffe66d;
+    padding: 20px;
+    border: 4px solid #1a1a1a;
+    box-shadow: 6px 6px 0px #1a1a1a;
 }
 
-/* --- Tabel Data (Border 1) --- */
-table[border="1"] {
-    width: 100%;
-    max-width: 1000px;
-    border-collapse: collapse;
-    margin-top: 20px;
-    border: 2px solid #2b2b2b; /* Mengembalikan border luar agar data tidak berantakan */
+.data-container h2 {
+    border-bottom: none;
+    margin: 5px 0;
+    text-shadow: none;
 }
 
-table[border="1"] th {
-    background-color: #3b5a4f; /* Header Hijau Sage */
-    color: #ffffff;
-    padding: 15px;
-    border-bottom: 2px solid #2b2b2b;
-    text-transform: uppercase;
-    font-size: 14px;
-}
-
-table[border="1"] td {
-    padding: 15px;
-    border-bottom: 1px solid rgba(43, 43, 43, 0.15);
-    text-align: center;
-    background: #ffffff;
-    color: #2b2b2b;
-}
-
-table[border="1"] tr:hover td {
-    background: #fdfbf7; /* Highlight baris yang lembut */
-}
-
-/* --- Form --- */
+/* Forms & Inputs Styles */
 form {
     max-width: 600px;
     margin: 40px auto;
     background: #ffffff;
-    padding: 30px;
-    border-radius: 12px;
-    border: 2px solid #2b2b2b;
-    border-left: 8px solid #e05a47; /* Aksen garis tebal Terracotta di kiri */
-    box-shadow: 6px 6px 0px rgba(43, 43, 43, 0.15);
+    padding: 25px;
+    border: 4px solid #1a1a1a;
+    box-shadow: 8px 8px 0px #1a1a1a;
+    font-weight: bold;
 }
 
-/* --- Form Inputs --- */
 input[type="text"],
 input[type="number"],
 input[type="password"],
@@ -139,55 +132,95 @@ input[type="date"],
 select,
 textarea {
     width: 100%;
-    padding: 12px;
-    background: #ffffff;
-    border: 2px solid #2b2b2b;
-    border-radius: 6px;
-    color: #2b2b2b;
-    font-family: 'DM Sans', sans-serif;
-    font-size: 16px;
+    padding: 10px;
     margin-top: 5px;
-    transition: all 0.2s;
+    border: 3px solid #1a1a1a;
+    background-color: #f9f9f9;
+    font-size: 1rem;
+    font-weight: bold;
 }
 
 input:focus, select:focus, textarea:focus {
     outline: none;
-    border-color: #e05a47;
-    background: #fffdf9;
-    box-shadow: 4px 4px 0px rgba(224, 90, 71, 0.2);
+    background-color: #ffe66d;
 }
 
-/* Custom untuk Radio & Checkbox */
-input[type="radio"], input[type="checkbox"] {
-    margin-right: 5px;
-    accent-color: #3b5a4f;
-}
-
-/* --- Tombol & Submit --- */
-button, input[type="submit"] {
-    background: #2b2b2b;
-    color: #ffffff;
-    border: 2px solid #2b2b2b;
-    padding: 12px 24px;
-    font-family: 'Space Mono', monospace;
+/* Buttons (Submit, Edit, Hapus, Tambah) */
+input[type="submit"], .btn-tambah, .btn-edit, .btn-hapus {
+    display: inline-block;
+    padding: 10px 20px;
+    font-family: 'Courier New', Courier, monospace;
     font-weight: bold;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: all 0.2s ease;
     text-transform: uppercase;
-    box-shadow: 4px 4px 0px #e05a47; /* Bayangan pop kontras */
+    text-decoration: none;
+    border: 3px solid #1a1a1a;
+    box-shadow: 4px 4px 0px #1a1a1a;
+    cursor: pointer;
+    transition: all 0.1s ease;
 }
 
-button:hover, input[type="submit"]:hover {
-    background: #e05a47;
-    color: #ffffff;
-    box-shadow: 2px 2px 0px #2b2b2b;
+input[type="submit"] {
+    background-color: #4ecdc4;
+    color: #1a1a1a;
+    width: 100%;
+    font-size: 1.2rem;
+}
+
+.btn-tambah { background-color: #ffe66d; color: #1a1a1a; }
+.btn-edit { background-color: #4ecdc4; color: #1a1a1a; padding: 5px 10px; font-size: 0.9rem;}
+.btn-hapus { background-color: #ff6b6b; color: #ffffff; padding: 5px 10px; font-size: 0.9rem;}
+
+input[type="submit"]:hover, .btn-tambah:hover, .btn-edit:hover, .btn-hapus:hover {
     transform: translate(2px, 2px);
+    box-shadow: 1px 1px 0px #1a1a1a;
 }
 
-/* --- Images --- */
+/* Header & Navigation (Untuk Halaman Mahasiswa modern) */
+header {
+    background: #ff6b6b;
+    border: 4px solid #1a1a1a;
+    padding: 20px;
+    margin-bottom: 30px;
+    box-shadow: 6px 6px 0px #1a1a1a;
+    text-align: center;
+}
+
+header h1 {
+    box-shadow: none;
+    border: none;
+    background: transparent;
+    margin-bottom: 10px;
+}
+
+nav a {
+    display: inline-block;
+    padding: 8px 15px;
+    margin: 5px;
+    background: #ffe66d;
+    color: #1a1a1a;
+    text-decoration: none;
+    font-weight: bold;
+    border: 2px solid #1a1a1a;
+    box-shadow: 3px 3px 0px #1a1a1a;
+}
+
+nav a:hover {
+    transform: translate(1px, 1px);
+    box-shadow: 1px 1px 0px #1a1a1a;
+}
+
+/* Images & Media */
 img {
-    border-radius: 6px;
-    border: 2px solid #2b2b2b;
-    box-shadow: 4px 4px 0px rgba(43, 43, 43, 0.15);
+    border: 3px solid #1a1a1a;
+    box-shadow: 4px 4px 0px #1a1a1a;
+}
+
+/* Footer Style */
+footer {
+    margin-top: 40px;
+    padding: 15px;
+    background: #1a1a1a;
+    color: #ffffff;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
 }

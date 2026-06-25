@@ -1,20 +1,19 @@
 <?php
-    $koneksi = mysqli_connect("localhost", "root", "", "faaweekly");
+    $koneksi = mysqli_connect("localhost", "root", "", "yeaweekly");
 
     $query = "SELECT * FROM mahasiswa";
 
     $result = mysqli_query($koneksi, $query);
 ?>
 
-<!DOCTYPE html>
-<html lang="id">
+<!DOCTYPE .php>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Data Mahasiswa - TI UNIMUS</title>
 
-    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/style.css">
+     <link rel="stylesheet" href="asset/style.css">
+     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;900&display=swap" rel="stylesheet">
 </head>
 
 <body class="mahasiswa-page">
@@ -61,8 +60,7 @@
                 <td>samlekab@gmail.com</td>
                 <td>08957062620800</td>
                 <td>
-                    <img src="assets/image/urbae.png"
-                         alt="Yanuar Eka"
+                    <img src= "asset/urbae.png"
                          width="100">
                 </td>
                 <td>
@@ -91,4 +89,4 @@
     </footer>
 
 </body>
-</html>
+</.php>
