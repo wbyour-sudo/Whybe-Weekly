@@ -1,12 +1,11 @@
 <?php
-    $koneksi = mysqli_connect("localhost", "root", "", "yeaweekly");
-
+    require 'fungsi.php';
     $query = "SELECT * FROM mahasiswa";
-
-    $result = mysqli_query($koneksi, $query);
+    $mahasiswas = tampildata($query);
 ?>
 
-<!DOCTYPE .php>
+<!DOCTYPE html>
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -43,6 +42,7 @@
             <tr>
                 <th>No</th>
                 <th>Nama</th>
+                <th>NIM</th>
                 <th>Prodi</th>
                 <th>Email</th>
                 <th>No HP</th>
@@ -50,17 +50,19 @@
                 <th>Aksi</th>
             </tr>
             <?php
-                while ($mhs = mysqli_fetch_assoc($result))
+                $no = 1;
+                foreach ($mahasiswas as $mhs)
                 {
             ?>
             <tr>
-                <td>1</td>
-                <td>Yanuar Eka Arifiyanto</td>
-                <td>Teknologi Informasi</td>
-                <td>samlekab@gmail.com</td>
-                <td>08957062620800</td>
+                <td><?= $no++; ?></td>
+                <td><?= $mhs['nama']; ?></td>
+                <td><?= $mhs['nim']; ?></td>
+                <td><?= $mhs['prodi']; ?></td>
+                <td><?= $mhs['email']; ?></td>
+                <td><?= $mhs['no_hp']; ?></td>
                 <td>
-                    <img src= "asset/urbae.png"
+                    <img src="assets/images/<?= $mhs['foto']; ?>" alt="<?= $mhs['nama']; ?>"
                          width="100">
                 </td>
                 <td>
@@ -89,4 +91,4 @@
     </footer>
 
 </body>
-</.php>
+</html>
