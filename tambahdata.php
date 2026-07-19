@@ -1,105 +1,90 @@
 <?php
-    require 'fungsi.php';
-    if(isset($_POST['kirim']))
-    {
-        $nama = $_POST["nama"];
-        $nim = $_POST["nim"];
-        $prodi = $_POST["prodi"];
-        $email = $_POST["email"];
-        $no_hp = $_POST["no_hp"];
-        $foto = $_POST["foto"];
+require 'fungsi.php';
 
-        $query = "INSERT INTO mahasiswa (nama, nim, prodi, email, no_hp, foto)
-        VALUES ('$nama', '$nim', '$prodi', '$email', '$no_hp', '$foto')";
-        mysqli_query($koneksi, $query);
+if(isset($_POST["submit"])){
 
-        if (mysqli_affected_rows($koneksi) > 0)
-        {
-            echo "
-                <script>
-                    alert('Data berhasil ditambahkan!');
-                    window.location.href = 'mahasiswa.php';
-                </script>
-            ";
-        }
-        else
-        {
-            echo "
-                <script>
-                    alert('Data gagal ditambahkan!');
-                    window.location.href = 'mahasiswa.php';
-                </script>
-            ";
-        }
+    if(tambah($_POST, $_FILES["foto"]) > 0){
+        echo "
+        <script>
+            alert('Data berhasil ditambahkan');
+            document.location.href='mahasiswa.php';
+        </script>";
+    }else{
+        echo "
+        <script>
+            alert('Data gagal ditambahkan');
+            document.location.href='tambahdata.php';
+        </script>";
     }
+
+}
 ?>
 
 <!DOCTYPE html>
-<html lang="id">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tambah Mahasiswa - TI UNIMUS</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Tambah Data Mahasiswa</title>
 </head>
+<body>
+    <nav>
+        <table border="1" align="center" cellspacing="0" cellpadding="10px">
+            <tr>
+                <td><a href="index.php">Home</a></td>
+                <td><a href="profil.php">Profile</a></td>
+                <td><a href="kontak.php">Contact</a></td>
+                <td><a href="mahasiswa.php">Data Mahasiswa</a></td>
+                <td><a href="form.php">Form</a></td>
+            </tr>
+        </table>
+    </nav>
 
-<body class="tambah-page">
-    <header>
-        <h1>WEB TI UNIMUS</h1>
-        <nav>
-            <a href="index.php">Home</a>
-            <a href="about.php">About</a>
-            <a href="contact.php">Contact</a>
-            <a href="mahasiswa.php">Data Mahasiswa</a>
-        </nav>
-    </header>
+<h2>Tambah Data Mahasiswa</h2>
 
-    <main>
-        <h2>Tambah Data Mahasiswa</h2>
+<form action="" method="post" enctype="multipart/form-data">
 
-        <div class="card">
-            <form action="" method="post">
+<table>
 
-                <div class="form-group">
-                    <label>Nama</label>
-                    <input type="text" id="nama" name="nama" required>
-                </div>
+<tr>
+    <td>Nama</td>
+    <td><input type="text" name="nama" required></td>
+</tr>
 
-                <div class="form-group">
-                    <label>NIM</label>
-                    <input type="text" id="nim" name="nim" required>
-                </div>
+<tr>
+    <td>NIM</td>
+    <td><input type="number" name="nim" required></td>
+</tr>
 
-                <div class="form-group">
-                    <label>Prodi</label>
-                    <input type="text" id="prodi" name="prodi" required>
-                </div>
+<tr>
+    <td>Program Studi</td>
+    <td><input type="text" name="prodi" required></td>
+</tr>
 
-                <div class="form-group">
-                    <label>Email</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
+<tr>
+    <td>Email</td>
+    <td><input type="email" name="email" required></td>
+</tr>
 
-                <div class="form-group">
-                    <label>No HP</label>
-                    <input type="number" id="no_hp" name="no_hp" required>
-                </div>
+<tr>
+    <td>Nomor HP</td>
+    <td><input type="number" name="no_hp" required></td>
+</tr>
 
-                <div class="form-group">
-                    <label>Foto</label>
-                    <input type="file" id="foto" name="foto" accept="image/*" required>
-                </div>
+<tr>
+    <td>Foto</td>
+    <td><input type="file" name="foto"></td>
+</tr>
 
-                <button type="submit" name="kirim">Submit</button>
+<tr>
+    <td></td>
+    <td>
+        <button type="submit" name="submit">Simpan</button>
+        <a href="mahasiswa.php">Kembali</a>
+    </td>
+</tr>
 
-            </form>
-        </div>
-    </main>
+</table>
 
-    <footer align="center">
-        <p>© 2026 TI UNIMUS</p>
-    </footer>
+</form>
 
 </body>
 </html>
